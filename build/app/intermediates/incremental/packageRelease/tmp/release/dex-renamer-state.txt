@@ -1,0 +1,4 @@
+#Sat Aug 19 23:21:44 WIB 2023
+base.0=D\:\\ExpenseManager_FlutterProject\\my_app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
