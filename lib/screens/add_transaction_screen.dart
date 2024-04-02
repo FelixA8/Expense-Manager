@@ -187,150 +187,84 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
           key: _formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Text(
-                    'Date',
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 45,
-                  ),
-                  Expanded(
-                    child: TextFormField(
-                      key: Key(selectedDate
-                          .toString()), //change the shown initial value
-                      onTap: _presentDatePicker,
-                      keyboardType: TextInputType.none,
-                      decoration: const InputDecoration(
-                          contentPadding: EdgeInsets.only(top: 10, left: 8),
-                          labelText: 'Input Date',
-                          border: OutlineInputBorder()),
-                      initialValue: DateFormat('dd/MM/yyyy')
-                          .add_jm()
-                          .format(selectedDate),
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                      onSaved: (newValue) {
-                        _enteredDate = selectedDate;
-                      },
-                    ),
-                  ),
-                ],
+              TextFormField(
+                key: Key(
+                    selectedDate.toString()), //change the shown initial value
+                onTap: _presentDatePicker,
+                keyboardType: TextInputType.none,
+                decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.only(top: 10, left: 8),
+                    labelText: 'Input Date',
+                    border: OutlineInputBorder()),
+                initialValue:
+                    DateFormat('dd/MM/yyyy').add_jm().format(selectedDate),
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+                onSaved: (newValue) {
+                  _enteredDate = selectedDate;
+                },
               ),
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Text(
-                    'Amount',
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: TextFormField(
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.only(top: 10, left: 8),
-                        labelText: 'Amount',
-                        prefix: Text('Rp. '),
-                        border: OutlineInputBorder(),
-                      ),
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                      validator: (value) {
-                        if (value == null ||
-                            value.isEmpty ||
-                            int.tryParse(value) == null ||
-                            int.tryParse(value)! <= 0) {
-                          return 'Please input correct amount and format';
-                        }
-                        return null;
-                      },
-                      onSaved: (newValue) {
-                        _enteredAmount = double.parse(newValue!);
-                      },
-                    ),
-                  ),
-                ],
+              TextFormField(
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  contentPadding: EdgeInsets.only(top: 10, left: 8),
+                  labelText: 'Amount',
+                  prefix: Text('Rp. '),
+                  border: OutlineInputBorder(),
+                ),
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+                validator: (value) {
+                  if (value == null ||
+                      value.isEmpty ||
+                      int.tryParse(value) == null ||
+                      int.tryParse(value)! <= 0) {
+                    return 'Please input correct amount and format';
+                  }
+                  return null;
+                },
+                onSaved: (newValue) {
+                  _enteredAmount = double.parse(newValue!);
+                },
               ),
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Text(
-                    'Title',
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 52,
-                  ),
-                  Expanded(
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.only(top: 10, left: 8),
-                        labelText: 'Title',
-                        border: OutlineInputBorder(),
-                      ),
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                      validator: (value) {
-                        if (value == null ||
-                            value.isEmpty ||
-                            value.trim().length <= 1 &&
-                                value.trim().length > 15) {
-                          return 'Please input the text (the range must be between 1 - 15 letters)';
-                        }
-                        return null;
-                      },
-                      onSaved: (newValue) {
-                        _enteredTitle = newValue!;
-                      },
-                    ),
-                  ),
-                ],
+              TextFormField(
+                decoration: const InputDecoration(
+                  contentPadding: EdgeInsets.only(top: 10, left: 8),
+                  labelText: 'Title',
+                  border: OutlineInputBorder(),
+                ),
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+                validator: (value) {
+                  if (value == null ||
+                      value.isEmpty ||
+                      value.trim().length <= 1 && value.trim().length > 15) {
+                    return 'Please input the text (the range must be between 1 - 15 letters)';
+                  }
+                  return null;
+                },
+                onSaved: (newValue) {
+                  _enteredTitle = newValue!;
+                },
               ),
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Text(
-                    'Category',
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                    child: _setDropDown(),
-                  ),
-                ],
-              ),
+              _setDropDown(),
               const SizedBox(
                 height: 20,
               ),
@@ -392,7 +326,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                 onTap: _saveItem,
                 child: Container(
                   width: double.infinity,
-                  height: 70,
+                  height: 40,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: const Color.fromRGBO(31, 119, 0, 1),

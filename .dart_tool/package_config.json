@@ -69,7 +69,7 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.17.2",
+      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.17.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -213,15 +213,15 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16",
+      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.15",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.5.0",
+      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.13"
     },
     {
       "name": "meta",
@@ -417,9 +417,9 @@
     },
     {
       "name": "source_span",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0",
+      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.9.1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.14"
     },
     {
       "name": "stack_trace",
@@ -465,19 +465,19 @@
     },
     {
       "name": "test",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/test-1.24.3",
+      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/test-1.24.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.6.0",
+      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.5.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "test_core",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/test_core-0.5.3",
+      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/test_core-0.5.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -510,12 +510,6 @@
       "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
-    },
-    {
-      "name": "web",
-      "rootUri": "file:///C:/Users/felix/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.1.4-beta",
-      "packageUri": "lib/",
-      "languageVersion": "3.1"
     },
     {
       "name": "web_socket_channel",
@@ -560,7 +554,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-09-01T08:58:30.074147Z",
+  "generated": "2024-04-02T16:46:05.247161Z",
   "generator": "pub",
-  "generatorVersion": "3.1.0"
+  "generatorVersion": "3.0.6"
 }

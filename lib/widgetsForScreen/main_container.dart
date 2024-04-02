@@ -39,6 +39,8 @@ class _MainContainerState extends State<MainContainer> {
     } else if (widget.totalBalance < 0) {
       colorAmount = const Color.fromRGBO(189, 53, 53, 1);
       totalValueBalance = totalValueBalance * -1;
+    } else if (widget.totalBalance == 0) {
+      colorAmount = const Color.fromRGBO(255, 255, 255, 0.65);
     }
 
     return Padding(
