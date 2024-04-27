@@ -1,4 +1,4 @@
-## About Project
+# About Project
 An application for managing expenses and income.
 
 # First Run
