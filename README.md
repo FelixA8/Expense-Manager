@@ -1,48 +1,57 @@
-# About Project
-An application for managing expenses and income.
+# Expense-Manager
 
-# First Run
+**Expense-Manager** is a user-friendly mobile application designed to help individuals efficiently track and manage their expenses. With this app, users can easily log their daily transactions, edit or delete transactions, and check statistics for their total expenses.
 
-The project is configured with mock data if you run the **MOCK** flavor. See the next section for configuring run configurations.
+## Features
 
-After installing the package dependencies with 
+- **Transaction Logging**: Quickly add daily transactions with details such as amount, category, and date.
+- **Edit & Delete Transactions**: Modify or remove entries as needed to keep your expense records accurate.
+- **Statistics Overview**: View insights into your spending habits and track your total transactions over time.
+- **User-Friendly Interface**: Designed with simplicity and usability in mind for all users.
 
-```
-flutter pub get
-```
+## Technology Stack
 
-run the code generation tool 
+- **Flutter**: The primary framework used for building the application, responsible for all logic and user interface components.
+- **Dart**: The programming language used to write the app.
+- **Shared Preferences**: Used for local data storage, allowing users to save and retrieve their transaction data seamlessly.
 
-```
-flutter pub run build_runner build
-```
+## Getting Started
 
-## Run Configurations
+### Prerequisites
 
-In addition to the [Flutter's build modes][flutter_build_modes] (debug, profile, release), 
-the project has 4 flavours/schemas for defining environments:
-- **mock** - mock environment that uses mock values. Launches `main_mock.dart`
-- **dev** - development environment that targets a development server. Launches `main_dev.dart`
-- **staging** - staging environment that targets a staging server. Launches `main_staging.dart`
-- **production** - production environment that targets a production server. Launches `main_production.dart`
+Before you begin, ensure you have met the following requirements:
 
-To run the app use the following command:
-```
-flutter run --flavor dev -t lib/main_dev.dart
-```
-or edit run configurations in Android Studio:
-- Go to EditConfigurations...
-- Enter configuration name: DEV, STAGE, PROD
-- Enter dart entry point: main_dev.dart, main_staging.dart, main_production.dart
-- Enter additional run args: --flavor=dev, --flavor=staging, --flavor=production
-- Enter build flavor: dev, staging, production
+- Flutter SDK installed.
+- A Firebase project set up (for authentication and Firestore).
+- Xcode (for iOS development) or Android Studio (for Android development).
+- Basic knowledge of Dart and Flutter.
 
-See [flavor_config.dart] for environment specific config.
+### Installation
 
-For adding an additional Flutter flavours see the [official documentation][flutter_flavours_official] 
-and [this blog post][blog_flavouring_flutter]. 
+1. Clone the repository:
 
-[flutter_build_modes]: https://flutter.dev/docs/testing/build-modes
-[flavor_config.dart]: ./lib/config/flavor_config.dart
-[flutter_flavours_official]: https://flutter.dev/docs/deployment/flavors
-[blog_flavouring_flutter]: https://medium.com/@salvatoregiordanoo/flavoring-flutter-392aaa875f36
+   ```bash
+   git clone https://github.com/FelixA8/Expense-Manager.git
+   cd Expense-Manager
+
+2. Clone the repository:
+   ```bash
+   flutter pub get
+
+3. Run the app:
+   ```bash
+   flutter run
+
+## Project Structure
+
+The project is organized as follows:
+
+```bash
+expense_manager/
+├── lib/
+│   ├── main.dart          # Entry point of the application
+│   ├── models/            # Data models for transactions
+│   ├── screens/           # UI screens for the application
+│   ├── widgetsForScreen/  # Reusable UI components
+│   └── file_helper.dart/  # Business logic for storing data internally
+├── pubspec.yaml           # Project dependencies and metadata
